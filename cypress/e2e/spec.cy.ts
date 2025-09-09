@@ -2,16 +2,7 @@ describe("template spec", () => {
   it("passes", () => {
     cy.visit("http://localhost:5173/");
   });
-  // it("should have a button", () => {
-  //     //assign
-  //     cy.visit("http://localhost:5173/");
-  //     const theButton = cy.get("button").should("exist");
-  //     //act
-  //     theButton.click();
-  //     //assert
-  //     cy.get("h2").should("contain.text", "Välkommen till din todo-lista");
-  //     // cy.get("h2").contains("Välkommen till din todo-lista");
-  // });
+
   it("should have a search button", () => {
     cy.visit("http://localhost:5173/");
     cy.get("button").should("contain.text", "Sök");
@@ -22,7 +13,7 @@ describe("template spec", () => {
 
     cy.get("input").type("star").should("have.value", "star");
 
-    const knappen = cy.get("button").should("exist");
+    const knappen = cy.get("#search").should("exist");
 
     knappen.click();
   });
@@ -32,7 +23,7 @@ describe("template spec", () => {
 
     // cy.get("input").type("empty").should("have.value", "");
 
-    const knappen = cy.get("button").should("exist");
+    const knappen = cy.get("#search").should("exist");
 
     knappen.click();
 
