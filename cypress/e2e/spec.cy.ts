@@ -38,6 +38,4 @@ describe("template spec", () => {
 
     cy.get("p").should("contain.text", "Inga sökresultat att visa");
   });
-
-  // it("should display a text ");
 });
